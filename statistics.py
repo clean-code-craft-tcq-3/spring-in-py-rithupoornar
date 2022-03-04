@@ -1,3 +1,7 @@
 
 def calculateStats(numbers):
-  return None
+  computedNumbers = {}
+  computedNumbers["avg"] = sum(numbers)/len(numbers)
+  computedNumbers["maxNum"] = max(numbers)
+  computedNumbers["minNum"] = min(numbers)
+  return computedNumbers
