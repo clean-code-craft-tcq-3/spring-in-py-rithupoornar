@@ -1,7 +1,13 @@
 
 def calculateStats(numbers):
   computedNumbers = {}
-  computedNumbers["avg"] = sum(numbers)/len(numbers)
-  computedNumbers["maxNum"] = max(numbers)
-  computedNumbers["minNum"] = min(numbers)
-  return computedNumbers
+    try:
+        computedNumbers["avg"] = sum(numbers)/len(numbers)
+        computedNumbers["max"] = max(numbers)
+        computedNumbers["min"] = min(numbers)
+    except Exception as e:
+        computedNumbers["avg"] = float('nan')
+        computedNumbers["max"] = float('nan')
+        computedNumbers["min"] = float('nan')
+    
+    return computedNumbers
